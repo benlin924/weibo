@@ -74,7 +74,8 @@ class IndexController extends CommonController{
 		$data = array('content' =>$_POST['content'],
 					'isturn'=>$id,
 					'time' => time(),
-					'uid' => session('uid')
+					'uid' => session('uid'),
+					
 		);
 		$db = M('weibo');
 		if(M('weibo')->data($data)->add()){
